@@ -44,7 +44,7 @@ uploaded_file = st.file_uploader("📁 Unggah Gambar Anda", type=["jpg", "jpeg",
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert('RGB')
-    st.image(image, caption="📷 Gambar yang Diupload", use_column_width=True)
+    st.image(image, caption="📷 Gambar yang Diupload", use_container_width=True)
 
     with st.spinner("🎯 Menganalisis warna dominan..."):
         dominant_colors = get_dominant_colors(image, k=5)
